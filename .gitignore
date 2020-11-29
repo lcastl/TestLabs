@@ -16,6 +16,10 @@ src/test/resources/data/cookiesTemporal.txt
 
 # Batch files
 *.sh
+build/
+.gradle
+chromedriver.exe
+desktop.ini
 
 #Folders to ignore
 .idea/*
