@@ -1,13 +1,6 @@
 # Compiled class file
 *.class
 
-#TestRunner For SDETS to work on
-src/test/java/dcl_cruise_sales_spa/runners/home/UtilSDET.java
-
-#Temporal Data Used in the Execution
-src/test/resources/data/castawayTemporalData.txt
-src/test/resources/data/cookiesTemporal.txt
-
 # Log file
 *.log
 
@@ -16,15 +9,14 @@ src/test/resources/data/cookiesTemporal.txt
 
 # Batch files
 *.sh
-build/
-.gradle
-chromedriver.exe
-desktop.ini
+
 
 #Folders to ignore
-.idea/*
-target/*
-.settings/*
+.idea
+target
+.settings
+build
+.gradle/*
 
 #Specific files
 .classpath

@@ -1,12 +1,15 @@
 package testrunners;
+
+
 import io.cucumber.junit.Cucumber;
-import net.serenitybdd.cucumber.CucumberWithSerenity;
-import org.junit.runner.RunWith;
 import io.cucumber.junit.CucumberOptions;
+
+import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/features/amazon.feature"}
+        features = {"src/test/resources/features/"},
+        glue = {"stepdefinitions"}
 )
 public class SmokeTest {
 }

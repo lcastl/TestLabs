@@ -14,17 +14,22 @@ public class AmazonSearch {
     @Page
     AmazonHomePage amazonHomePage;
 
-    @Given("^that I am at the amazon home page")
+    @Given("that I am at the amazon home page")
     public void thatIAmAtTheAmazonHomePage() {
         amazonHomePage.openHomePage();
     }
 
-    @When("I search for a (.*)")
+    @When("I search for a (.*)$")
     public void iSearchForAProduct(String product) {
         amazonHomePage.searchAmazonProduct(product);
     }
 
-    @Then("I verify the list of given products")
+    @When("I click on search button")
+    public void iClickOnSearchButton() {
+        amazonHomePage.clickOnSearchButton();
+    }
+
+    @Then("I verify the list of given products$")
     public void iVerifyTheListOfGivenProducts() {
         assertThat("The expected was not found", amazonHomePage.verifySearchResult());
     }
