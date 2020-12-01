@@ -1,13 +1,11 @@
 package pages.homepage;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
-import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebDriver;
+import pages.BasePage;
 
-@DefaultUrl("https://www.amazon.com/")
-public class AmazonHomePage extends PageObject {
+public class AmazonHomePage extends BasePage {
 
     @FindBy(id = "twotabsearchtextbox")
     private WebElementFacade txtSearchField;
@@ -23,7 +21,7 @@ public class AmazonHomePage extends PageObject {
     }
 
     public void openHomePage() {
-        open();
+        openBrowser();
     }
 
     public void searchAmazonProduct(String product) {

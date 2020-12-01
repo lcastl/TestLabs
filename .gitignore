@@ -13,10 +13,10 @@
 
 #Folders to ignore
 .idea
-target
+target/
 .settings
-build
-.gradle/*
+.gradle
+/build/
 
 #Specific files
 .classpath
